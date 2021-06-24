@@ -39,6 +39,17 @@ function compareDist(a, b) {
     return a.dist - b.dist;
 }
 
+//      |             |  
+//.  C  |.     B      |.  C
+//      |             |
+//------+-------------+--------
+//      |             |
+//  B   |      A      |.   B
+//      |             |
+//------+-------------+--------
+//      |             |
+//  C   |      B      |.   C
+//      |             |
 function boxDist(x, y, box) {
     var dx = axisDist(x, box.minX, box.maxX),
         dy = axisDist(y, box.minY, box.maxY);
